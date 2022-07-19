@@ -1,12 +1,12 @@
 {
-	"name": "base",
+	"name": "python-dev",
 	"build": {
-		"dockerfile": "Dockerfile",
+		"dockerfile": "Containerfile.python",
 		"args": {
 			"USER_UID": "1000",
 			"USERNAME": "vscode",
-			"VARIANT": "latest"
-			// "VARIANT": "stable-slim"
+			// "VARIANT": "latest"
+			"VARIANT": "slim"
 		}
 	},
 
@@ -14,7 +14,10 @@
 	"settings": {},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [],
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance"
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -31,6 +34,6 @@
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
 	"workspaceFolder": "/workspace",
 
-	"runArgs": ["--userns=keep-id", "--name=base"],
+	"runArgs": ["--userns=keep-id", "--name=python-dev"],
 	"containerUser": "vscode"
 }
