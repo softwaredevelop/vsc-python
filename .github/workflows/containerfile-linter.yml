@@ -52,6 +52,18 @@ jobs:
         with:
           dockerfile: .devcontainer/Containerfile.debian
 
+  run-lint-python:
+    name: Hadolint Action .debian
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Hadolint
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: .devcontainer/Containerfile.python
+
   trivy-scan:
     name: Trivy
     runs-on: ubuntu-latest
