@@ -53,7 +53,7 @@ jobs:
           dockerfile: .devcontainer/Containerfile.debian
 
   run-lint-python:
-    name: Hadolint Action .debian
+    name: Hadolint Action .python
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
