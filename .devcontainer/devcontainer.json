@@ -12,8 +12,21 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
+		"jupyter.exportWithOutputEnabled": true,
+		"jupyter.generateSVGPlots": true,
+		"python.formatting.blackPath": "~/.local/bin/black",
+		"python.formatting.provider": "black",
+		"python.linting.banditPath": "~/.local/bin/bandit",
 		"python.linting.enabled": true,
-		"python.linting.pylintEnabled": true
+		"python.linting.flake8Path": "~/.local/bin/flake8",
+		"python.linting.mypyPath": "~/.local/bin/mypy",
+		"python.linting.pycodestylePath": "~/.local/bin/pycodestyle",
+		"python.linting.pydocstylePath": "~/.local/bin/pydocstyle",
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "~/.local/bin/pylint",
+		"python.testing.pytestEnabled": true,
+		"python.testing.pytestPath": "~/.local/bin/pytest",
+		"python.testing.unittestEnabled": true
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
