@@ -1,7 +1,7 @@
 {
 	"name": "python-dev",
 	"build": {
-		"dockerfile": "Containerfile.python",
+		"dockerfile": "Dockerfile",
 		"args": {
 			"USER_UID": "1000",
 			"USERNAME": "vscode",
